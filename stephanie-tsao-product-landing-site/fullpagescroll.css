@@ -1,0 +1,372 @@
+@import url(https://fonts.googleapis.com/css?family=Tangerine);
+@import url(https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css);
+@import url(https://fonts.googleapis.com/css?family=Raleway:400,500,800);
+@import url(https://fonts.googleapis.com/css?family=Montserrat:800);
+
+*, ::before, ::after
+{
+    box-sizing: border-box;
+}
+
+body{
+    position:relative;
+    margin:0;
+    overflow: hidden;
+    display: flex;
+    height:100vh;
+    flex-direction: column;
+    line-height: 1.5;
+    font-family: tahoma;
+    font-size: 59.8%;
+  
+}
+
+.smooth {
+    position: relative;
+    width:100%;
+    height:100%;
+    scroll-behavior:smooth;
+    overflow-y: auto;
+    overflow-x: hidden;
+    scroll-snap-type: mandatory;
+    scroll-snap-type: y mandatory;
+}
+
+.topnav{
+    position:fixed;
+    top:0;
+    z-index:1;
+    display:flex;
+    width:100%;
+    min-height: 100px;
+    font-size: 20px;
+    background: linear-gradient(180deg, rgba(34, 36, 37, 0.685), rgba(49, 68, 141, .1), transparent);
+}
+
+.topnav ul{
+    margin:0;
+    padding:0;
+    list-style: none;
+    display:flex;
+    width:100%;
+    justify-content: center;
+}
+
+.topnav ul li a{
+    position:relative;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight:590;
+    margin-right: 25px;
+    color:rgb(255, 255, 255);
+}
+
+.topnav ul li a::after{
+    position:absolute;
+    bottom:-3px;
+    left:0;
+    height:3px;
+    transition: all 0.2s linear;
+}
+
+.topnav ul li a:hover::after{
+    width:100%;
+}
+
+section{
+    position:relative;
+    display:flex !important; /*!important overrides bootstrap default settings*/
+    width:100%;
+    min-height:100%;
+    flex-flow: column wrap;
+    align-items: center;
+    justify-content: center;
+    font-size: 1rem;
+    background-color: #a0a0a0;
+  /*  background-image: url(img4.jpg);*/
+    background-size:cover;
+    scroll-snap-align:center;
+    background-position: center center; /*always center background image in viewport*/
+    background-attachment: fixed; /*make sure background image doesn't move around when scrolling, gives scroll over effect*/
+    background-repeat: no-repeat;
+}
+
+section h2, h1{
+
+    font-family: 'Tangerine', serif;
+    text-shadow: 4px 4px 4px #aaa;
+    font-size: 3.25rem;
+    font-weight: 900;
+    padding: 0.5em 1em;
+    color: white;
+    border-radius: 0.25em;
+    pointer-events: none;
+    user-select: none;
+}
+
+section:nth-child(2)
+{
+    background-image: url(img1.jpg);
+
+    position:relative;
+}
+
+section:nth-child(3)
+{
+    background-image: url(img2.jpg);
+    position: relative;
+
+}
+
+section:nth-child(4)
+{
+    background-image: url(img3.jpg);
+}
+
+.scoop-video-container video {
+  width: 100vw;
+  height: 100vh;
+  position: relative;
+  object-fit: cover;
+  z-index: 0;
+}
+
+.scoop-content {
+  position:absolute;
+  z-index:9999999999;
+}
+
+section:nth-child(6)
+{
+    background-image: url(img4.jpg);
+
+    position:relative;
+}
+
+#footer-links{
+  float:left;
+  padding-left:1em;
+}
+
+#footer-notice{
+  float:right;
+  padding-right: 1em;
+}
+
+footer{
+    padding: 0px;
+    background: rgba(18, 88, 121, 0.685);
+   text-align:center;
+   font-size: medium;
+   color:white;
+    }
+
+  footer a:link{
+    color:rgb(255, 255, 255); 
+  }
+
+  footer a:visited{
+    color:rgb(255, 255, 255); 
+  }
+
+  footer a:hover{
+    color:rgb(255, 255, 255); 
+  }
+
+  footer a:active{
+    color:rgb(255, 255, 255); 
+  }
+
+  
+
+/********** responsive video embed ***********/
+  .video-container {
+    overflow: hidden;
+    position: relative;
+    width: 56.25%;
+  }
+  
+  .video-container::after {
+    padding-top: 56.25%; /*aspect ratio of a video is 16:9. (9 is 56.25% of 16). Use 75% for 4:3 video*/
+    display: block;
+    content: '';
+  }
+  
+  .video-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+  
+/********** pricing table ***********/
+  .snip1214 {
+    font-family: 'Raleway', Arial, sans-serif;
+    color: #000000;
+    text-align: center;
+    font-size: 16px;
+    width: 100%;
+    max-width: 1000px;
+    margin: 40px 10px;
+  }
+  .snip1214 .plan {
+    margin: 0;
+    width: 25%;
+    position: relative;
+    float: left;
+    background-color: #ffffff;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+  }
+  .snip1214 * {
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+  }
+  .snip1214 header {
+    position: relative;
+  }
+  .snip1214 .plan-title {
+    position: relative;
+    top: 0;
+    font-weight: 800;
+    padding: 5px 15px;
+    margin: 0 auto;
+    -webkit-transform: translateY(-50%);
+    transform: translateY(-50%);
+    margin: 0;
+    display: inline-block;
+    background-color: #222f3d;
+    color: #ffffff;
+    text-transform: uppercase;
+  }
+  .snip1214 .plan-cost {
+    padding: 0px 10px 20px;
+  }
+  .snip1214 .plan-price {
+    font-family: 'Montserrat', Arial, sans-serif;
+    font-weight: 800;
+    font-size: 2.4em;
+    color: #34495e;
+  }
+  .snip1214 .plan-type {
+    opacity: 0.6;
+  }
+  .snip1214 .plan-features {
+    padding: 0;
+    margin: 0;
+    text-align: center;
+    list-style: outside none none;
+    font-size: 0.8em;
+  }
+  .snip1214 .plan-features li {
+    border-top: 1px solid #d2d7e2;
+    padding: 10px 5%;
+  }
+  .snip1214 .plan-features li:nth-child(even) {
+    background: rgba(0, 0, 0, 0.08);
+  }
+  .snip1214 .plan-features i {
+    margin-right: 8px;
+    opacity: 0.4;
+  }
+  .snip1214 .plan-select {
+    border-top: 1px solid #d2d7e2;
+    padding: 10px 10px 0;
+  }
+  .snip1214 .plan-select a {
+    background-color: #222f3d;
+    color: #ffffff;
+    text-decoration: none;
+    padding: 0.5em 1em;
+    -webkit-transform: translateY(50%);
+    transform: translateY(50%);
+    font-weight: 800;
+    text-transform: uppercase;
+    display: inline-block;
+  }
+  .snip1214 .plan-select a:hover {
+    background-color: #46627f;
+  }
+  .snip1214 .featured {
+    margin-top: -10px;
+    background-color: #34495e;
+    color: #ffffff;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
+    z-index: 1;
+  }
+  .snip1214 .featured .plan-title,
+  .snip1214 .featured .plan-price {
+    color: #ffffff;
+  }
+  .snip1214 .featured .plan-cost {
+    padding: 10px 10px 20px;
+  }
+  .snip1214 .featured .plan-features li {
+    border-top: 1px solid rgba(255, 255, 255, 0.4);
+  }
+  .snip1214 .featured .plan-select {
+    padding: 20px 10px 0;
+    border-top: 1px solid rgba(255, 255, 255, 0.4);
+  }
+  @media only screen and (max-width: 767px) {
+    .snip1214 .plan {
+      width: 50%;
+    }
+    .snip1214 .plan-title,
+    .snip1214 .plan-select a {
+      -webkit-transform: translateY(0);
+      transform: translateY(0);
+    }
+    .snip1214 .plan-cost,
+    .snip1214 .featured .plan-cost {
+      padding: 20px 10px 20px;
+    }
+    .snip1214 .plan-select,
+    .snip1214 .featured .plan-select {
+      padding: 10px 10px 10px;
+    }
+    .snip1214 .featured {
+      margin-top: 0;
+    }
+  }
+  @media only screen and (max-width: 440px) {
+    .snip1214 .plan {
+      width: 100%;
+    }
+  }
+
+
+  /**********contact form***********/
+  /* Style inputs with type="text", select elements and textareas */
+input[type=text], select, textarea {
+    width: 100%; /* Full width */
+    padding: 12px; /* Some padding */ 
+    border: 1px solid #ccc; /* Gray border */
+    border-radius: 4px; /* Rounded borders */
+    box-sizing: border-box; /* Make sure that padding and width stays in place */
+    margin-top: 6px; /* Add a top margin */
+    margin-bottom: 16px; /* Bottom margin */
+    resize: vertical /* Allow the user to vertically resize the textarea (not horizontally) */
+  }
+  
+  /* Style the submit button with a specific background color etc */
+  input[type=submit] {
+    background-color: #04AA6D;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  /* When moving the mouse over the submit button, add a darker green color */
+  input[type=submit]:hover {
+    background-color: #45a049;
+  }
+  
+  /* Add a background color and some padding around the form */
+  .container {
+    border-radius: 5px;
+    background-color: #f2f2f2;
+    padding: 20px;
+  }

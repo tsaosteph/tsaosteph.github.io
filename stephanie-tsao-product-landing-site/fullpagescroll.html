@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Ice Cream Full Page Scroll Site</title>
+        <link rel="stylesheet" type="text/css" href="fullpagescroll.css">
+
+
+        <!-- Bootstrap-->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+         integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+        
+        
+    </head>
+    <body>
+
+  <!--NAV BAR-->
+
+  <!--Show only on screens smaller than lg-->
+  <div class="d-lg-none">
+    <nav class="navbar navbar-expand-lg navbar-light navback" style="background-color: rgba(18, 88, 121, 0.685);">
+      <a class="navbar-brand text-light" href="#">Menu</a>
+      <button class="navbar-toggler navbar-dark" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item active">
+            <a class="nav-link text-light" href="#home">Home<span class="sr-only">(current)</span></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-light" href="#about">About</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-light" href="#price">Price</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-light" href="#close-up">Close Up</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-light" href="#contact">Contact</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+  </div>
+
+
+        <div class = "smooth">
+          <!--Hide Standard Main Menu Display on Screens Smaller than lg-->
+          <div class = "topnav d-none d-lg-block">
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#price">Pricing</a></li>
+                    <li><a href="#close-up">Close Up</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </div>
+            
+            <!--Home Page-->
+            <section id = "home">
+              <center>
+                <h2>Welcome <br class="d-md-none">to <br class="d-md-none">Yummy Ice Creams!</h2>
+              </center>
+            </section>
+
+            <!--About Ice Cream Video Page-->
+            <section id = "about">
+            
+              <h2>About Ice Cream</h2>
+                <div class="video-container">
+                  <iframe src="https://www.youtube.com/embed/7gJIyHnD710" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+
+            </section>
+
+            <!--Pricing Page-->
+            <section id = "price">
+                <h2>Pricing</h2>
+                <div class="snip1214">
+                    <div class="plan">
+                      <h3 class="plan-title">
+                        Kids
+                      </h3>
+                      <div class="plan-cost"><span class="plan-price">$3</span><span class="plan-type">/ Month</span></div>
+                      <ul class="plan-features">
+                        <li><i class="ion-checkmark"> </i>1 Topping</li>
+                        <li><i class="ion-checkmark"> </i>1 Sauce</li>
+                        <li><i class="ion-checkmark"> </i>1 Choice of Fruit</li>
+                        <li><i class="ion-checkmark"> </i>Unlimited Sprinkles</li>
+                      </ul>
+                      <div class="plan-select"><a href="">Select Plan</a></div>
+                    </div>
+                    <div class="plan">
+                      <h3 class="plan-title">
+                        Regular
+                      </h3>
+                      <div class="plan-cost"><span class="plan-price">$5</span><span class="plan-type">/ Month</span></div>
+                      <ul class="plan-features">
+                        <li><i class="ion-checkmark"> </i>3 Toppings</li>
+                        <li><i class="ion-checkmark"> </i>3 Sauces</li>
+                        <li><i class="ion-checkmark"> </i>3 Choices of Fruit</li>
+                        <li><i class="ion-checkmark"> </i>Unlimited Sprinkles</li>
+                       </ul>
+                      <div class="plan-select"><a href="">Select Plan</a></div>
+                    </div>
+                    <div class="plan featured">
+                      <h3 class="plan-title">
+                        Treat Yourself
+                      </h3>
+                      <div class="plan-cost"><span class="plan-price">$10</span><span class="plan-type">/ Month</span></div>
+                      <ul class="plan-features">
+                        <li><i class="ion-checkmark"> </i>5 Toppings</li>
+                        <li><i class="ion-checkmark"> </i>5 Sauces</li>
+                        <li><i class="ion-checkmark"> </i>5 Choices of Fruit</li>
+                        <li><i class="ion-checkmark"> </i>Unlimited Sprinkles</li>
+                      </ul>
+                      <div class="plan-select"><a href="">Select Plan</a></div>
+                    </div>
+                    <div class="plan">
+                      <h3 class="plan-title">
+                        Ultimate
+                      </h3>
+                      <div class="plan-cost"><span class="plan-price">$15</span><span class="plan-type">/ Month</span></div>
+                      <ul class="plan-features">
+                        <li><i class="ion-checkmark"> </i>10 Toppings</li>
+                        <li><i class="ion-checkmark"> </i>10 Sauces</li>
+                        <li><i class="ion-checkmark"> </i>10 Choices of Fruit</li>
+                        <li><i class="ion-checkmark"> </i>Unlimited Sprinkles</li>
+                      </ul>
+                      <div class="plan-select"><a href="">Select Plan</a></div>
+                    </div>
+                  </div>
+            </section>
+
+            <!--Video Page-->
+            <section id = "close-up">
+              <div class="scoop-video-container">
+                <video id = "scoopvid" playsinline autoplay muted loop poster="scoopvidstill.png">
+                <source src="scoopvid.mp4"  type="video/webm">
+              </div>
+              <div class="scoop-content">
+                <h2>Delicious Ice Cream!</h2>
+              </div>
+            </section>
+
+
+            <!--Contact Us Page-->
+            <section id = "contact">
+                <h2>Contact Us</h2>
+
+                <!--Contact Us Form-->
+                <div class="container">
+                    <form action="action_page.php">
+                  
+                      <label for="fname">First Name</label>
+                      <input type="text" id="fname" name="firstname" placeholder="Your name..">
+                  
+                      <label for="lname">Last Name</label>
+                      <input type="text" id="lname" name="lastname" placeholder="Your last name..">
+                  
+                      <label for="country">Country</label>
+                      <select id="country" name="country">
+                        <option value="usa">USA</option>
+                        <option value="canada">Canada</option>
+                        <option value="australia">Australia</option>                       
+                      </select>
+                  
+                      <label for="subject">Subject</label>
+                      <textarea id="subject" name="subject" placeholder="Write something..." style="height:200px"></textarea>
+                  
+                      <input type="submit" value="Submit">
+                  
+                    </form>
+                  </div>
+            </section>
+        </div>
+            
+
+        <!--Footer Bar-->
+        <footer>
+            <div id ="footer-links">
+     
+             <a href="#">Terms of Use</a> |
+             <a href="#">Privacy Policy</a>
+
+           </div>
+           <div id ="footer-notice">
+           <font>Copyright 2021, Vivi + Livy</font>
+           </div> 
+         </footer> 
+    
+    </body>
+</html>
