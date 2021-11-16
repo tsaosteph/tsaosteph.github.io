@@ -1,6 +1,6 @@
-#Website Projects
+# Website Projects
 
-######See the projects live:
+### See the projects live:
 
 Email Template (Responsive)
 https://tsaosteph.github.io/stephanie-tsao-responsive-email-template/email.html
