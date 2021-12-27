@@ -5,7 +5,7 @@ let green = 0;
 let rainbowize = false;
 let eraser = false;
 
-const container = document.querySelector("#container");
+const gridContainer = document.querySelector("#grid-container");
 
 
 userRequest(); // start program
@@ -17,9 +17,9 @@ function userRequest(){
     if (gridSize >= 2 && gridSize <= 100)
     {
         //remove all squares to erase old grid
-        while(container.firstChild)
+        while(gridContainer.firstChild)
         {
-            container.removeChild(container.firstChild);
+            gridContainer.removeChild(gridContainer.firstChild);
         }
     
         //make new grid
@@ -46,8 +46,8 @@ function userRequest(){
 function createGrid(rows, columns)
 {
     //set up container for grid of rows and columns
-    container.style.setProperty("grid-template-columns", `repeat(${columns}, 2fr)`);
-    container.style.setProperty("grid-template-rows", `repeat(${rows}, 2fr)`);
+    gridContainer.style.setProperty("grid-template-columns", `repeat(${columns}, 2fr)`);
+    gridContainer.style.setProperty("grid-template-rows", `repeat(${rows}, 2fr)`);
 
     //create squares
     let numSquares = rows * columns;
@@ -56,7 +56,7 @@ function createGrid(rows, columns)
         let square = document.createElement("div");
         square.classList.add("square");
         square.addEventListener("mouseover", () => changeColor(square));
-        container.appendChild(square);
+        gridContainer.appendChild(square);
     };
 
     //change color of color display and grid colors
@@ -94,14 +94,17 @@ function changeColor(square)
     //set color of grid square
     square.style.setProperty("background-color", `rgb(${red},${green},${blue}`);
 
-    //turn off rainbowize if user goes back to manual color selection
+    //turn off rainbowize if user goes back to manual color selection or if user is using eraser
     document.querySelector("#red-slider").addEventListener('click', ()=>rainbowize=false);
     document.querySelector("#green-slider").addEventListener('click', ()=>rainbowize=false);
     document.querySelector("#blue-slider").addEventListener('click', ()=>rainbowize=false);
 
+
     if (eraser == true)
     {
         square.style.setProperty("background-color", `rgb(255,255,255)`);   
+        document.querySelector("#eraser").addEventListener('click', ()=>rainbowize=false);
+        
     }
 
     //turn off eraser if user goes back to manual color selection or rainbow selection

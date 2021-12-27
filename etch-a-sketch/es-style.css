@@ -5,7 +5,14 @@ body {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
-#container {
+button{
+    margin:10px;
+}
+
+#grid-form{
+    margin:10px;
+}
+#grid-container {
     border: 5px solid black;
     display: grid;
     height: 500px;
@@ -30,15 +37,13 @@ body {
     opacity: 1;
 }
 
+#red-slider{
+    margin-top: 10px;
+}
 #color-display{
-    
+    margin:10px;
     border:1px solid black;
     border-radius: 50%;
-    height:100px;
-    width:100px;
-
-}
-input.vertical {
-	-webkit-appearance: slider-vertical;
-	writing-mode: bt-lr;
+    height:75px;
+    width:75px;
 }

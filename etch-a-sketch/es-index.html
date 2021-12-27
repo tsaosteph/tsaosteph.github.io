@@ -1,34 +1,63 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+         <!-- Required meta tags -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <!-- Bootstrap CSS -->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+        
+        <!-- Custom CSS -->
         <link rel="stylesheet" type="text/css" href="es-style.css">
         <title>Etch-A-Sketch</title>
     </head>
     <body>
+        
         <h1>Etch-A-Sketch</h1>
+
         <div>
-            <form onsubmit="return false;"> <!--prevents from auto reloading-->
+            <form id="grid-form" onsubmit="return false;"> <!--prevents from auto reloading-->
                 <label for="grid-input">Please enter grid size between 2 and 100:</label>
                 <br>
                 <input type="text" id="grid-input" value="10" name="grid-input"></input>
                 <input type ="submit" id="grid-input-submit" value="submit">
             </form>
         </div>
-        <div class = "slidecontainer">
-            Red <input type = "range" class="vertical" orient="vertical" min = "0" max = "255" value = "0" class = "slider" id = "red-slider">
-            Green <input type = "range" class="vertical" orient="vertical" min = "0" max = "255" value = "0" class = "slider" id = "green-slider">
-            Blue <input type = "range" class="vertical" orient="vertical" min = "0" max = "255" value = "0" class = "slider" id = "blue-slider">
+
+        <div class="container">
+            <div class="row ">
+                <div class="col text-end">
+                        R <input type = "range" class="vertical"  min = "0" max = "255" value = "0" class = "slider" id = "red-slider">
+                        <br>
+                        G <input type = "range" class="vertical"  min = "0" max = "255" value = "0" class = "slider" id = "green-slider">
+                        <br>
+                        B <input type = "range" class="vertical"  min = "0" max = "255" value = "0" class = "slider" id = "blue-slider">
+                </div>
+                <div class ="col">
+                    <div id="color-display"></div>
+                </div>
+            </div>
+
+            <div class = "row ">
+                <div class="col d-flex justify-content-center">
+                    <button type="button" id="rainbow-button">Rainbow</button>
+                    <button type="button" id="eraser">Eraser</button>
+                    <button type="button" id="clear-board">Clear Board</button>
+                </div>
+            </div>
+            <br>
+            <div class ="row">
+                <div class="col d-flex justify-content-center">
+                    <div id = "grid-container"></div> 
+                </div>           
+            </div>
+
         </div>
-        <div id="color-display"></div>
-        <button type="button" id="rainbow-button">Rainbow</button>
-        <button type="button" id="eraser">Eraser</button>
-        <button type="button" id="clear-board">Clear Board</button>
-        
 
-
-        <div id = "container"></div>
+        <!-- Custom JavaScript -->
         <script src = "es-script.js"></script>
+        <!-- Bootstrap JavaScript -->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
     </body>
 </html>
