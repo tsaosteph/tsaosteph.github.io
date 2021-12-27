@@ -5,6 +5,8 @@ let green = 0;
 let rainbowize = false;
 let eraser = false;
 
+const container = document.querySelector("#container");
+
 
 userRequest(); // start program
 
@@ -14,6 +16,13 @@ function userRequest(){
 
     if (gridSize >= 2 && gridSize <= 100)
     {
+        //remove all squares to erase old grid
+        while(container.firstChild)
+        {
+            container.removeChild(container.firstChild);
+        }
+    
+        //make new grid
         createGrid(gridSize, gridSize);
     }
 }
@@ -36,8 +45,6 @@ function userRequest(){
 
 function createGrid(rows, columns)
 {
-    const container = document.querySelector("#container");
-
     //set up container for grid of rows and columns
     container.style.setProperty("grid-template-columns", `repeat(${columns}, 2fr)`);
     container.style.setProperty("grid-template-rows", `repeat(${rows}, 2fr)`);
@@ -64,6 +71,7 @@ function createGrid(rows, columns)
     document.querySelector("#eraser").addEventListener('click', () => eraser = true);
 
     document.querySelector("#grid-input-submit").addEventListener('click', userRequest);
+    document.querySelector("#clear-board").addEventListener('click', userRequest);
 
 }
 
@@ -101,7 +109,6 @@ function changeColor(square)
     document.querySelector("#green-slider").addEventListener('click', ()=>eraser=false);
     document.querySelector("#blue-slider").addEventListener('click', ()=>eraser=false);
     document.querySelector("#rainbow-button").addEventListener('click',()=>eraser = false);
-    
 
 }
 
