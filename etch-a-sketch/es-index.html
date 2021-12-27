@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" type="text/css" href="es-style.css">
+        <title>Etch-A-Sketch</title>
+    </head>
+    <body>
+        <h1>Etch-A-Sketch</h1>
+        <div>
+            <form onsubmit="return false;"> <!--prevents from auto reloading-->
+                <label for="grid-input">Please enter grid size between 2 and 100:</label>
+                <br>
+                <input type="text" id="grid-input" value="2" name="grid-input"></input>
+                <input type ="submit" id="grid-input-submit" value="submit">
+            </form>
+        </div>
+        <div class = "slidecontainer">
+            Red <input type = "range" class="vertical" orient="vertical" min = "0" max = "255" value = "0" class = "slider" id = "red-slider">
+            Green <input type = "range" class="vertical" orient="vertical" min = "0" max = "255" value = "0" class = "slider" id = "green-slider">
+            Blue <input type = "range" class="vertical" orient="vertical" min = "0" max = "255" value = "0" class = "slider" id = "blue-slider">
+        </div>
+        <div id="color-display"></div>
+        <button type="button" id="rainbow-button">Rainbow</button>
+        <button type="button" id="eraser">Eraser</button>
+
+        <div id = "container"></div>
+        <script src = "es-script.js"></script>
+    </body>
+</html>
