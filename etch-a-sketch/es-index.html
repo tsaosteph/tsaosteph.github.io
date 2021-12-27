@@ -17,6 +17,7 @@
         <h1>Etch-A-Sketch</h1>
 
         <div>
+            <!-- get user input for grid size -->
             <form id="grid-form" onsubmit="return false;"> <!--prevents from auto reloading-->
                 <label for="grid-input">Please enter grid size between 2 and 100:</label>
                 <br>
@@ -28,6 +29,7 @@
         <div class="container">
             <div class="row ">
                 <div class="col text-end">
+                        <!-- RGB sliders -->
                         R <input type = "range" class="vertical"  min = "0" max = "255" value = "0" class = "slider" id = "red-slider">
                         <br>
                         G <input type = "range" class="vertical"  min = "0" max = "255" value = "0" class = "slider" id = "green-slider">
@@ -35,12 +37,14 @@
                         B <input type = "range" class="vertical"  min = "0" max = "255" value = "0" class = "slider" id = "blue-slider">
                 </div>
                 <div class ="col">
+                    <!-- color display circle -->
                     <div id="color-display"></div>
                 </div>
             </div>
 
             <div class = "row ">
                 <div class="col d-flex justify-content-center">
+                    <!-- rainbow, eraser, and clear board buttons -->
                     <button type="button" id="rainbow-button">Rainbow</button>
                     <button type="button" id="eraser">Eraser</button>
                     <button type="button" id="clear-board">Clear Board</button>
@@ -49,6 +53,7 @@
             <br>
             <div class ="row">
                 <div class="col d-flex justify-content-center">
+                    <!-- grid -->
                     <div id = "grid-container"></div> 
                 </div>           
             </div>

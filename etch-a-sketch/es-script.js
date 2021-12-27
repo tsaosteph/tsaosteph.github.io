@@ -10,6 +10,7 @@ const gridContainer = document.querySelector("#grid-container");
 
 userRequest(); // start program
 
+//get user input on grid. default grid is 10, the value from the HTML file.
 function userRequest(){
 
     const gridSize = document.querySelector('#grid-input').value;
@@ -27,22 +28,6 @@ function userRequest(){
     }
 }
 
-/*
-function userRequest(){
-    let validNum = false;
-    while (validNum == false)
-    {   
-        const gridSize = prompt("Please enter grid size between 2 and 100");
-
-        if (gridSize >= 2 && gridSize <= 100)
-        {
-            validNum = true;
-            createGrid(gridSize, gridSize);
-        }
-    }
-}
-*/
-
 function createGrid(rows, columns)
 {
     //set up container for grid of rows and columns
@@ -52,6 +37,7 @@ function createGrid(rows, columns)
     //create squares
     let numSquares = rows * columns;
 
+    //create grid and set up mouseover color listener
     for(let i = 0; i < numSquares; i++) {
         let square = document.createElement("div");
         square.classList.add("square");
@@ -89,35 +75,37 @@ function changeColor(square)
     }
     
     //set color of color display
-    document.querySelector("#color-display").style.setProperty("background-color", `rgb(${red},${green},${blue}`);
+    document.querySelector("#color-display").style.setProperty("background-color", `rgb(${red},${green},${blue})`);
 
     //set color of grid square
-    square.style.setProperty("background-color", `rgb(${red},${green},${blue}`);
+    square.style.setProperty("background-color", `rgb(${red},${green},${blue})`);
 
     //turn off rainbowize if user goes back to manual color selection or if user is using eraser
-    document.querySelector("#red-slider").addEventListener('click', ()=>rainbowize=false);
-    document.querySelector("#green-slider").addEventListener('click', ()=>rainbowize=false);
-    document.querySelector("#blue-slider").addEventListener('click', ()=>rainbowize=false);
+    document.querySelector("#red-slider").addEventListener('click', () => rainbowize = false);
+    document.querySelector("#green-slider").addEventListener('click', () => rainbowize = false);
+    document.querySelector("#blue-slider").addEventListener('click', () => rainbowize = false);
 
-
+    //if eraser is on, turn squares and color display white
     if (eraser == true)
     {
         square.style.setProperty("background-color", `rgb(255,255,255)`);   
-        document.querySelector("#eraser").addEventListener('click', ()=>rainbowize=false);
+        document.querySelector("#color-display").style.setProperty("background-color", `rgb(255,255,255)`);
+        document.querySelector("#eraser").addEventListener('click', () => rainbowize = false);
         
     }
 
     //turn off eraser if user goes back to manual color selection or rainbow selection
-    document.querySelector("#red-slider").addEventListener('click', ()=>eraser = false);
-    document.querySelector("#green-slider").addEventListener('click', ()=>eraser=false);
-    document.querySelector("#blue-slider").addEventListener('click', ()=>eraser=false);
-    document.querySelector("#rainbow-button").addEventListener('click',()=>eraser = false);
+    document.querySelector("#red-slider").addEventListener('click', () => eraser = false);
+    document.querySelector("#green-slider").addEventListener('click', () => eraser = false);
+    document.querySelector("#blue-slider").addEventListener('click', () => eraser = false);
+    document.querySelector("#rainbow-button").addEventListener('click',() => eraser = false);
 
 }
 
 function changeRainbowColor()
 {
-    red = Math.floor(Math.random() * 256);//get random integer between 0 and 255
+    //get random integer between 0 and 255 and assign to rgb colors
+    red = Math.floor(Math.random() * 256);
     green = Math.floor(Math.random() * 256);   
     blue = Math.floor(Math.random() * 256);
 }
